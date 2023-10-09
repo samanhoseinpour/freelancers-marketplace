@@ -5,7 +5,7 @@ import { NavLinks } from '@/constants';
 import { AuthProviders } from '.';
 
 const Navbar: React.FC = () => {
-  const session = {};
+  const session = null;
 
   return (
     <nav className="flexBetween navbar">
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
         {session ? (
           <>
             UserPhoto
-            <Link href="/create-post">+Share Post</Link>
+            <Link href="/create-post">+ Share Post</Link>
           </>
         ) : (
           <AuthProviders />
