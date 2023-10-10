@@ -1,13 +1,13 @@
 export const getUserQuery = `
     query GetUser($email: Email!) {
         user(by: { email: $email }) {
-        id
-        name
-        email
-        avatarUrl
-        description
-        githubUrl
-        linkedInUrl
+            id
+            name
+            email
+            avatarUrl
+            description
+            githubUrl
+            linkedInUrl
         }
     }
 `;
