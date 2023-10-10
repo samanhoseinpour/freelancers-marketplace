@@ -14,7 +14,7 @@ type Provider = {
 
 type Providers = Record<string, Provider>;
 
-const AuthProviders = () => {
+const AuthProviders: React.FC = () => {
   const [providers, setProviders] = useState<Providers | null>(null);
 
   useEffect(() => {

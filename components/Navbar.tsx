@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { NavLinks } from '@/constants';
-import { AuthProviders } from '.';
+import { AuthProviders, ProfileMenu } from '.';
 import { getCurrentUser } from '@/lib/session';
 
 const Navbar: React.FC = async () => {
@@ -33,17 +33,7 @@ const Navbar: React.FC = async () => {
       <div className="flexCenter gap-4">
         {session?.user ? (
           <>
-            {session?.user?.image && (
-              <Link href={`/profile/${session.user.id}`}>
-                <Image
-                  src={session.user.image}
-                  alt={session.user.name}
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-              </Link>
-            )}
+            <ProfileMenu session={session} />
             <Link href="/create-post">+ Share Post</Link>
           </>
         ) : (
